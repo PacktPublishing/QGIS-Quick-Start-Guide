@@ -1,0 +1,32 @@
+Installing
+
+1. Windows
+
+OSGeo4W installer
+
+Latest release
+Once you have downloaded the installer that matches your system, double click on the .exe file and step through the following installation screens. The simplest way, which installs the latest release is to select Express Desktop Install. This may not install QGIS 3.4. If you wish to do this then please see the next section on Advanced Installers.
+Select the checkboxes next to QGIS, GDAL and Grass GIS 
+
+Click next and the downloading process will begin. Progress will be displayed as each component is downloaded and installed. Having these installed will provide you with more tools to perform Geospatial analysis. After a short period of time you should see OSGeo4W in your program menu along with all the selected software installed – including QGIS. This will install the latest version of QGIS.
+
+Advanced Installer
+Select the radio button next to the advanced installer. 
+
+Step through the installation wizard. When you get to the Select Packages choose the version you require.
+You can select other packages if required. Once you have chosen click on Next and the installation will begin. 
+
+2. Installing on Ubuntu
+On Ubuntu, the QGIS project provides packages for the LTR, LR, and DEV versions. For this book we recommend installing the LTR version.
+To avoid conflicts that may occur due to incompatible packages, make sure that you only add one of the following package-source options. The specific lines that you have to add to the source list depend on your Ubuntu version. The below version is latest release for Debian stretch:
+deb     https://qgis.org/debian stretch main
+deb-src https://qgis.org/debian stretch main
+After choosing the repository, we will add the qgis.org repository's public key to our apt keyring. This will avoid the warnings that you might otherwise get when installing from a non-default repository. Run the following command in the terminal:
+wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
+gpg --fingerprint CAEB3DC3BDF7FB45
+gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
+If necessary, you might need to make adjustments based on your system. For an updated list of supported Ubuntu versions, check out http://www.qgis.org/en/site/forusers/alldownloads.html#debian-ubuntu.                                                                           By the time this book goes to print, the key information might have changed. Refer to http://www.qgis.org/en/site/forusers/alldownloads.html#debian-ubuntu for the latest updates.
+Finally, to install QGIS, run the following commands. The first will fetch any updates to packages on your system, the second will install qgis, the python library and the grass plugins.
+
+sudo apt-get update
+sudo apt-get install qgis python-qgis qgis-plugin-grass
