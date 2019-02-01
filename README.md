@@ -27,6 +27,7 @@ All of the code is organized into folders. For example, Chapter02.
 
 
 **Following is what you need for this book:**
+
 If you know the basic functions and processes of GIS, and want to learn to use QGIS to analyze geospatial data and create rich mapping applications, then this is the book for you.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-7).
